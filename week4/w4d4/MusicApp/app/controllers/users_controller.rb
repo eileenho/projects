@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
   def show
     if current_user.id = params[:id]
-      @user = User.find(params[:id]).to_i
+      @user = User.find(params[:id])
       render :show
     else
       redirect_to new_user_url
