@@ -15,3 +15,31 @@ for (let i = 1; i < 101; i++) {
     console.log(i);
   }
 }
+
+//yikes this is clunky!
+let board = "";
+for (let i = 0; i < 8; i++) {
+  if (i % 2 === 0) {
+    for (let j = 0; j < 8; j++) {
+      if (j > 0 && j % 7 === 0) {
+        board += " \n";
+      } else if (j % 2 === 0) {
+        board += "#";
+      } else {
+        board += " ";
+      }
+    }
+  } else {
+    for (let k = 0; k < 8; k++) {
+      if (k > 0 && k % 7 === 0) {
+        board += "#\n";
+      } else if (k % 2 === 0) {
+        board += " ";
+      } else {
+        board += "#";
+      }
+    }
+  }
+}
+
+console.log(board);
